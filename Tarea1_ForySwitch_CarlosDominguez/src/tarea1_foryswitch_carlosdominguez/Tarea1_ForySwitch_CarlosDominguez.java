@@ -124,7 +124,22 @@ public class Tarea1_ForySwitch_CarlosDominguez {
                     System.out.println("");
                     break;
                 case 4:
-                    
+                    String palabrac;
+                    brazil.nextLine();
+                    System.out.println("Ingrese un palabra para hacer el codigo");
+                    palabrac = brazil.nextLine();
+                    int rep =0;
+                    String repletra = "";
+                    for (int i = 0; i < palabrac.length(); i++) {
+                        if(palabrac.charAt(i)>97 && palabrac.charAt(i)<122){
+                            rep = palabrac.charAt(i);
+                            for (int j = 0; j < rep; j++) {
+                                repletra+=palabrac.charAt(i-1);  
+                            }
+                        }
+                    }
+                    System.out.println("El codigo es : ");
+                    System.out.println(repletra);
                     break;
                 case 5:
                     System.out.println("Saliendo.....");
