@@ -8,7 +8,7 @@ public class Tarea1_ForySwitch_CarlosDominguez {
         boolean out = true;
         do {
             System.out.println("**********MENU**********");
-            System.out.println("1.Cuantos números pares e impares hay entre este rango?");
+            System.out.println("1.Cuantos numeros pares e impares hay entre este rango?");
             System.out.println("2.Triangulos y mas Triangulos");
             System.out.println("3.Anita lava la tina");
             System.out.println("4.Codigos secretos");
@@ -63,19 +63,40 @@ public class Tarea1_ForySwitch_CarlosDominguez {
                 case 2:
                     boolean out2 = true;
                     do {
-                        System.out.println("1.triángulo equilátero");
-                        System.out.println("2.triángulo rectángulo");
+                        System.out.println("1.triangulo equilatero");
+                        System.out.println("2.triangulo rectangulo");
                         System.out.println("3.Salir del submenu");
                         int opcion2 = brazil.nextInt();
                         switch (opcion2) {
                             case 1:
-                                
+                                int alturae;
+                                System.out.println("Ingrese la altura :");
+                                alturae = brazil.nextInt();
+                                for (int i = 0; i < alturae; i++) {
+                                    for (int j = alturae - i; j > 1; j--) {
+                                        System.out.print(" ");
+                                        //para sacar los puntos vacio
+                                    }
+                                    for (int j = 0; j <= i * 2; j++) {
+                                        System.out.print("*");
+                                    }
+                                    System.out.println();
+                                }    
                                 break;
                             case 2:
-                                
+                                int alturar;
+                                System.out.println("Ingrese la altura :");
+                                alturar = brazil.nextInt();
+                                for (int i = 0; i < alturar; i++) {
+                                    for (int j = 0; j <= i; j++) {
+                                        System.out.print("*");
+                                    }
+                                    System.out.println("");
+                                }
                                 break;
-                             case 3:
-                                
+                            case 3:
+                                System.out.println("Saliendo del Submenu......."); 
+                                out2=false;
                                 break;       
                             default:
                                 System.out.println("La opcion no es valida");
@@ -84,7 +105,23 @@ public class Tarea1_ForySwitch_CarlosDominguez {
                     } while (out2);
                     break;
                 case 3:
+                    String Palabrai;
+                    brazil.nextLine();
+                    System.out.println("Ingrese una palabra");
+                    Palabrai = brazil.nextLine();
+                    String editada = Palabrai.replace(" ", "");
+                    editada = editada.toLowerCase();
                     
+                    String reversa="";
+                    for (int i = editada.length()-1; i >= 0; i--) {
+                        reversa+= editada.charAt(i);
+                    }
+                    if(reversa.equals(editada)){
+                        System.out.println("La palabra "+Palabrai+" si es Palindroma");
+                    }else{
+                        System.out.println("La palabra "+Palabrai+" no es Palindroma");
+                    }
+                    System.out.println("");
                     break;
                 case 4:
                     
