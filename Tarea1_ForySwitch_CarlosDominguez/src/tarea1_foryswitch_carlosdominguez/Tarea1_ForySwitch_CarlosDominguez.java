@@ -128,11 +128,11 @@ public class Tarea1_ForySwitch_CarlosDominguez {
                     brazil.nextLine();
                     System.out.println("Ingrese un palabra para hacer el codigo");
                     palabrac = brazil.nextLine();
-                    int rep =0;
+                    int rep;
                     String repletra = "";
                     for (int i = 0; i < palabrac.length(); i++) {
-                        if(palabrac.charAt(i)>97 && palabrac.charAt(i)<122){
-                            rep = palabrac.charAt(i);
+                        if(palabrac.charAt(i)>48 && palabrac.charAt(i)<57){
+                            rep = palabrac.charAt(i) - 48;
                             for (int j = 0; j < rep; j++) {
                                 repletra+=palabrac.charAt(i-1);  
                             }
